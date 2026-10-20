@@ -6,7 +6,7 @@
 [![Tests Status](https://img.shields.io/badge/tests-8%20passed-brightgreen.svg)](tests/)
 [![Docker Support](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](Dockerfile)
 
-> 🌐 **Live Web Application**: [https://contentmonetizationmodeler-mrm5xcpsx3pf3rvt4gwhd6.streamlit.app/](https://contentmonetizationmodeler-mrm5xcpsx3pf3rvt4gwhd6.streamlit.app/)
+> 🌐 **Live Web Application**: [APP](https://contentmonetizationmodeler-mrm5xcpsx3pf3rvt4gwhd6.streamlit.app/)
 
 An end-to-end Machine Learning web application and creator analytics platform designed to predict, decompose, and optimize YouTube advertisement revenue (`ad_revenue_usd`) from engagement and watch behavior metrics.
 
