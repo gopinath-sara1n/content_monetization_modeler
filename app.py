@@ -119,7 +119,7 @@ with col_head2:
         """
         <div style="text-align:right; padding-top:15px;">
             <span style="background-color:#1e293b; color:#38bdf8; padding:5px 12px; border-radius:15px; font-size:0.8rem; font-weight:600; border:1px solid #334155;">
-                v2.0 Production Ready 🚀
+                v2.0🚀
             </span>
         </div>
         """,
