@@ -1,3 +1,4 @@
+import sys
 import os
 import json
 import pickle
@@ -5,8 +6,14 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import streamlit as st
+from streamlit.web import cli as stcli
 import plotly.express as px
 import plotly.graph_objects as go
+
+# Enable running directly via `python app.py` or `streamlit run app.py`
+if not st.runtime.exists():
+    sys.argv = ["streamlit", "run", sys.argv[0]]
+    sys.exit(stcli.main())
 
 # ---------------- PAGE CONFIG ---------------- #
 st.set_page_config(
