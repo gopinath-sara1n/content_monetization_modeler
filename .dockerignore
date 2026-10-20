@@ -1,0 +1,16 @@
+.git
+.gitignore
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.coverage
+htmlcov
+scratch
+.DS_Store
+*.pptx
+*.docx
+cleaned_youtube_data.csv
+youtube_ad_revenue_dataset.csv

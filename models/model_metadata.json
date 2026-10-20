@@ -1,0 +1,74 @@
+{
+  "model_name": "Calibrated YouTube Monetization Regressor",
+  "version": "2.0.0",
+  "target_variable": "ad_revenue_usd",
+  "feature_columns": [
+    "views",
+    "likes",
+    "comments",
+    "watch_time_minutes",
+    "video_length_minutes",
+    "retention_rate",
+    "log_subscribers",
+    "engagement_rate"
+  ],
+  "primary_drivers": {
+    "views": {
+      "coef": 0.0052103930282014896,
+      "unit_value": "$5.21 per 1,000 views (Base CPM)"
+    },
+    "likes": {
+      "coef": 0.01718735229172073,
+      "unit_value": "$17.19 per 1,000 likes (Engagement Bonus)"
+    },
+    "comments": {
+      "coef": 0.017187352291720782,
+      "unit_value": "$17.19 per 1,000 comments (Engagement Bonus)"
+    },
+    "watch_time_minutes": {
+      "coef": 0.004714535679219503,
+      "unit_value": "$4.71 per 1,000 watch minutes (Mid-roll multiplier)"
+    }
+  },
+  "benchmark_comparison": [
+    {
+      "Model": "Calibrated Exact Model",
+      "Test R2": 1.0,
+      "Test MAE ($)": 0.0001,
+      "Test RMSE ($)": 0.0001
+    },
+    {
+      "Model": "Standard Linear Regression",
+      "Test R2": 1.0,
+      "Test MAE ($)": 0.0,
+      "Test RMSE ($)": 0.0
+    },
+    {
+      "Model": "Scaled RidgeCV",
+      "Test R2": 1.0,
+      "Test MAE ($)": 0.0007,
+      "Test RMSE ($)": 0.0011
+    },
+    {
+      "Model": "Scaled LassoCV",
+      "Test R2": 0.99989,
+      "Test MAE ($)": 0.5236,
+      "Test RMSE ($)": 0.6525
+    },
+    {
+      "Model": "HistGradientBoosting",
+      "Test R2": 0.99992,
+      "Test MAE ($)": 0.4414,
+      "Test RMSE ($)": 0.561
+    }
+  ],
+  "metrics": {
+    "test_r2": 1.0,
+    "test_mae_usd": 0.0,
+    "test_rmse_usd": 0.0
+  },
+  "data_insights": {
+    "root_cause_previous_error": "Previous Lasso MAE of $3.08 was an artifact of groupby mean imputation contaminating 14% of the rows with ~12,000 min error, plus unscaled feature penalties.",
+    "boundary_condition": "Constrained to non-negative values (Revenue >= $0.00)."
+  }
+}
